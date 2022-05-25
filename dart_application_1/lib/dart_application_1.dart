@@ -23,23 +23,30 @@ void calculadora() {
   double valorPneu = double.parse(stdin.readLineSync()!);*/
 
   if (escolha == 1) {
-    print("Informe o valor que voce paga no litro da gasolina");
+    print("Informe o valor que voce paga no litro da gasolina: ");
     double valorGasolina = double.parse(stdin.readLineSync()!);
-    print("Informe a media km/L que sua moto faz");
+    print("Informe a media km/L que sua moto faz: ");
     double mediaMoto = double.parse(stdin.readLineSync()!);
     var gastoGasolinaKm = (valorGasolina / mediaMoto);
     print("Você pagou $gastoGasolinaKm por Km rodado");
   } else if (escolha == 2) {
-    print("Informe o valor que voce paga no litro da gasolina");
+    print("Informe o valor que voce paga no litro da gasolina: ");
     double valorGasolina = double.parse(stdin.readLineSync()!);
-    print("Informe quantos litros voce abasteceu");
+    print("Informe a media km/L que sua moto faz: ");
     double mediaMoto = double.parse(stdin.readLineSync()!);
-    print("Informe a kilometragem que você rodou hoje");
+    print("Informe a kilometragem que você rodou hoje: ");
     double kmRodados = double.parse(stdin.readLineSync()!);
-    var gastoGasolinaTotal = (valorGasolina * mediaMoto);
-    print("Você pagou $gastoGasolinaTotal por Km rodado");
+    var gasolinaMedia = (valorGasolina / mediaMoto);
+    var kmMedia = (kmRodados / mediaMoto);
+    var gasolinaTotal = gasolinaMedia * kmMedia;
+    print("Você pagou $gasolinaTotal ao total");
   } else if (escolha == 3) {
-    print("Informe o valor que voce paga no pneu trocado");
+    print("Informe o valor que voce paga no pneu trocado: ");
     double valorPneu = double.parse(stdin.readLineSync()!);
+    print("Informe a kilometragem que você rodou hoje: ");
+    double kmRodados = double.parse(stdin.readLineSync()!);
+    var pneuTotal = (valorPneu * kmRodados) / 15000;
+    print(
+        "Se um pneu dura em média 15.000km, você gastou $pneuTotal de reais hoje.");
   }
 }

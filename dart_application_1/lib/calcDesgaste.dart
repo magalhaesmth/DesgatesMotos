@@ -4,18 +4,16 @@ String calculadora() {
   try {
     print('''
     ================= Calculador de desgate da moto e lucro de entregas =================
-    [1] - Calcular custos gastos com gasolina por km  -- valor do litro da gasolina, litros abastecidos, kilometragem rodada
-    [2] - Calcular gasto com gasolina rodado no dia 
-    [3] - Calcular gastos com pneu -- kilometragem rodada X valor do pneu a cada 15000k. Ex: 15k = 
-    [4] - Calcular gasto com oleo -- 1000km = 
-    [5] - Calcular gastos com a relação da moto
-    [6] - Total de gastos com a moto no dia -- gasto gasolina + pneu + oleo
-
-    [7] - Calcular media de gastos por mês 
-    [8] - Calcular lucro bruto coma as entregas no dia
-    [9] - Calcular lucro liquido com as entregas no dia
-
-    [10] - Calcular media de lucro no mes
+    1 - Calcular custos gastos com gasolina por km  -- valor do litro da gasolina, litros abastecidos, kilometragem rodada
+    2 - Calcular gasto com gasolina rodado no dia 
+    3 - Calcular gastos com pneu -- kilometragem rodada X valor do pneu a cada 15000k. Ex: 15k = 
+    4 - Calcular gasto com oleo -- 1000km = 
+    5 - Calcular gastos com a relação da moto
+    6 - Total de gastos com a moto no dia -- gasto gasolina + pneu + oleo
+    7 - Calcular media de gastos por mês 
+    8 - Calcular lucro bruto coma as entregas no dia
+    9 - Calcular lucro liquido com as entregas no dia
+    10 - Calcular media de lucro no mes
     ''');
 
     print("Escolha uma opção de gasto para moto: ");

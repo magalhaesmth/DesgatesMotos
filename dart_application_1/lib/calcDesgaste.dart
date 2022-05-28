@@ -30,6 +30,7 @@ String calculadora() {
           var gastoGasolinaKm = (valorGasolina / mediaMoto);
           return 'Você pagou R\$ {($gastoGasolinaKm por Km rodado)}';
         });
+        //Função retorna os gastos de gasolina por KM rodado
       } else if (escolha == 2) {
         total = opcoes(() {
           print("Informe o valor que voce paga no litro da gasolina: ");
@@ -42,6 +43,7 @@ String calculadora() {
               (valorGasolina / mediaMoto) * (kmRodados / mediaMoto);
           return 'Você pagou R\$ {($gasolinaTotal ao total)}';
         });
+        //Função retorna os gastos de gasolina por dia
       } else if (escolha == 3) {
         total = opcoes(() {
           print("Informe o valor que voce paga no pneu trocado: ");
@@ -51,6 +53,7 @@ String calculadora() {
           var pneuTotal = (valorPneu * kmRodados) / 15000;
           return 'Se um pneu dura em média 15.000km, você gastou R\$ {($pneuTotal)}';
         });
+        //Função retorna os gastos de pneu por dia
       } else if (escolha == 4) {
         total = opcoes(() {
           print("Informe o valor que voce paga no oleo trocado");
@@ -60,6 +63,7 @@ String calculadora() {
           var oleoTotal = (valorOleo * kmRodados) / 1000;
           return 'Se um oleo dura 1000kms, você gastou R\$ {($oleoTotal)}';
         });
+        //Função retorna os gastos com oleo por dia
       } else if (escolha == 5) {
         total = opcoes(() {
           print("Informe o valor que voce paga na relação da sua moto");
@@ -69,6 +73,7 @@ String calculadora() {
           var relacaoTotal = (valorRelacao * kmRodados) / 12000;
           return 'Se a relação dura em média 12000km, você gastou R\$ {($relacaoTotal)}';
         });
+        //Função retorna os gastos com relacao da moto por dia
       } else if (escolha == 6) {
         total = opcoes(() {
           print("Informe o valor que voce paga no litro da gasolina: ");
@@ -92,6 +97,7 @@ String calculadora() {
               gasolinaTotal + pneuTotal + oleoTotal + relacaoTotal;
           return 'Você gastou ao total no dia de hoje R\$ {($tudoTotal)}';
         });
+        //Função retorna os gastos totais da moto no dia 
       } else if (escolha == 7) {
         total = opcoes(() {
           print("Informe o valor que voce paga no litro da gasolina: ");
@@ -115,6 +121,7 @@ String calculadora() {
                   diasTrabalhados;
           return 'Supondo que você roda 500km por dia, você gasta um total de R\$ {($tudoTotal)} por mês';
         });
+        //Função retorna os gastos totais no mes
       } else if (escolha == 8) {
         total = opcoes(() {
           print("Informe o valor que voce recebe em media por cada entrega");
@@ -124,6 +131,7 @@ String calculadora() {
           var dinEntregas = (valorEntrega * qtdeEntregas);
           return 'Você fez hoje um total de R\$ {($dinEntregas)} bruto';
         });
+        //Função retorna o lucro bruto por dia
       } else if (escolha == 9) {
         total = opcoes(() {
           print("Informe o valor que voce recebe em media por cada entrega");
@@ -135,6 +143,20 @@ String calculadora() {
           var dinEntregas = (valorEntrega * qtdeEntregas) - totalGasto;
           return 'Você fez hoje um total de R\$ {($dinEntregas)} liquido';
         });
+         //Função retorna o lucro liquido por dia
+        } else if (escolha == 10) {
+        total = opcoes(() {
+           total = opcoes(() {
+          print("Informe o valor que voce recebe em media por cada entrega");
+          double valorEntrega = double.parse(stdin.readLineSync()!);
+          print("Informe quantas entregas voce fez hoje: ");
+          double qtdeEntregas = double.parse(stdin.readLineSync()!);
+          print("Informe quantas dias voce trabalhou esse mes: ");
+          double diasTrabalhados = double.parse(stdin.readLineSync()!);
+          var dinEntregas = (valorEntrega * qtdeEntregas) * diasTrabalhados;
+          return 'Você fez hoje um total de R\$ {($dinEntregas)} bruto por mês.';
+        });
+         //Funcao retorna lucro bruto ao mes
       } else {
         print("Opção inválida!");
       }
